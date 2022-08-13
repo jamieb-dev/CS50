@@ -1,21 +1,41 @@
 #include <stdio.h>
 
 
-void square(void);
+void drawSquare(int x);
+void drawLine(int x);
 
 int main() {
-    square();
-    printf("\n");
-    square();
-    return 0;
+    int input;
+    printf("How wide will your square be?:  ");
+    scanf("%i", &input);
+    drawSquare(input);
+}
+
+/*
+
+sqaure(desired x amount)
+
+    create y based on x
+    //creates first row of the sqaure
+    for ( create loop counter: j; check that: j < x ; then do:j++ ;)
+
+    //repeats for desired amount of rows.
+    for (create loop counter: k; check that k < y; j++ )
+
+
+*/
+
+
+void drawSquare(int x){
+    for(int k = 0; k < (x/2); k++){
+        drawLine(x);
+    }
 }
 
 
-void square(void) {
-    for (int y = 0; y < 3; y++){
-    for (int x = 0; x < 6; x++) {
-        printf("#");
+void drawLine(int l){
+    for (int j = 0; j < l; j++){
+    printf("#");
     }
     printf("\n");
-}
 }
