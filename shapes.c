@@ -1,11 +1,13 @@
 #include <stdio.h>
 
 void drawH(int x);
+void topRow(int x);
+void midRow(int x);
 void block(int x);
 void space(int x);
 int getInput(void);
-void topRow(int x);
-void midRow(int x);
+void square(int X);
+void rectangle(int x, int y);
 
 
 // TASK: Fix format issue when x is 20
@@ -13,8 +15,10 @@ void midRow(int x);
 
 
 int main(void) {
-
+    rectangle(10, 15);
+    printf("\n");
     drawH(getInput());
+    square(getInput());
     
     return 0;
 }
@@ -51,7 +55,7 @@ void drawH(int x) {
 int getInput(void) {
     printf("Desired X value: \n");
     int a;
-    scanf("%i", &a);
+    scanf("%d", &a);
     return a;
 }
 
@@ -85,29 +89,20 @@ void midRow(int x){
     }
 }
 
+void square(int x) {
+    for (int i = 0; i < x/2; i++) {
+        for (int i = 0; i < x; i++) {
+            printf("#");
+    }
+    printf("\n");
+    }
+}
 
-
-/*
-
-repeat x/3 times
-    repeat x/3 times
-        block
-    repeat x/3 times
-        space
-    repeat x/3 times
-        block
-    new line
-repeat x/3 times
-    repeat x/3 times
-        block
-    new line
-repeat x/3 times
-    repeat x/3 times
-        block
-    repeat x/3 times
-        space
-    repeat x/3 times
-        block
-    new line
-
-*/
+void rectangle(int x, int y){
+    for (int i = 0; i < y/2; i++) {
+        for (int i = 0; i < x; i++) {
+            printf("#");
+    }
+    printf("\n");
+    }
+}
