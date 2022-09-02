@@ -1,17 +1,31 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int arr[] = {2,3,4,6,7,3,4,5,1,3,4,6,8,4,2,3,5,2,6,4,1};
-int arrLen = (sizeof(arr) / sizeof(int));
+
+int arr[100000] = {};
 
 
 int main(void){
-    // prints unsorted array
 
-    for( int i = 0; i != arrLen; i++){
-        printf("%i", arr[i]);
+    // creates array
+
+    for(int i = 0; i < 100000; i++){;
+        arr[i] = rand();
     }
-    printf("\n");
 
+
+    // determines length of arr
+    int arrLen = (sizeof(arr) / sizeof(int));
+
+
+    // prints unsorted array
+    /*
+    printf("Unsorted: ");
+    for( int i = 0; i != arrLen; i++){
+        printf("%i, ", arr[i]);
+    }
+    printf("\n\n\n");
+    */
     // sorts array
     for( int i = 0; i != arrLen; i++){
         for( int i = 0; i < (arrLen - 1); i++){
@@ -25,10 +39,10 @@ int main(void){
     }
 
     // prints sorted array
-
+    printf("Sorted: ");
     for( int i = 0; i != arrLen; i++){
-        printf("%i", arr[i]);
+        printf("%i, ", arr[i]);
     }
-    printf("\n");
+    printf("\n\n\n");
     return 0;
 }
