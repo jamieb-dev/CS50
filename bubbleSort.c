@@ -2,14 +2,16 @@
 #include <stdlib.h>
 
 
-int arr[100000] = {};
+int main(int argc, char *argv[]){
 
 
-int main(void){
+    // initialises array
+    int x = atoi(argv[1]);
+    int arr[x];
 
-    // creates array
 
-    for(int i = 0; i < 100000; i++){;
+    // populates array
+    for(int i = 0; i < x; i++){;
         arr[i] = rand();
     }
 
@@ -19,6 +21,7 @@ int main(void){
 
 
     // prints unsorted array
+
     /*
     printf("Unsorted: ");
     for( int i = 0; i != arrLen; i++){
@@ -26,7 +29,10 @@ int main(void){
     }
     printf("\n\n\n");
     */
+
+
     // sorts array
+
     for( int i = 0; i != arrLen; i++){
         for( int i = 0; i < (arrLen - 1); i++){
             int j = (i+1);
@@ -38,11 +44,19 @@ int main(void){
         }
     }
 
+
+
     // prints sorted array
+
+    /*
+    
     printf("Sorted: ");
     for( int i = 0; i != arrLen; i++){
         printf("%i, ", arr[i]);
     }
     printf("\n\n\n");
+
+    */
+
     return 0;
 }
