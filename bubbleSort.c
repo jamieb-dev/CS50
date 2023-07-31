@@ -22,13 +22,13 @@ int main(int argc, char *argv[]){
 
     // prints unsorted array
 
-    /*
+    
     printf("Unsorted: ");
     for( int i = 0; i != arrLen; i++){
         printf("%i, ", arr[i]);
     }
     printf("\n\n\n");
-    */
+    
 
 
     // sorts array
